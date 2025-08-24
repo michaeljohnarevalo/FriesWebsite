@@ -1,0 +1,79 @@
+  body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            /*background-color: #f5f5dc;  Beige background */
+        }
+
+        .hero-section {
+            background-image: url('./assets/french-fries-web.png');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center;
+            height: 80vh;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .section-header {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .image-card {
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            position: relative;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-card:hover {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .image-card:hover .overlay {
+            opacity: 1;
+        }
+        
+        /* Custom styles for the recipe steps to create a timeline effect */
+        .procedure-step {
+            position: relative;
+        }
+
+        .procedure-step::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e5e5e5;
+        }
+
+        .procedure-step:last-child::before {
+            display: none;
+        }
+
+        .step-number-circle {
+            background-color: #e5e5e5;
+            color: #333;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
